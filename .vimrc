@@ -24,11 +24,8 @@ call neobundle#begin(expand('~/.vim/bundle'))
 "neobundle自身をneobundle.vimで管理する
 NeoBundleFetch 'Shugo/neobundle.vim'
 
-"""""""""""""""""""""""""""""""""""""""""""""""""
 "ここにインストールしたいプラグインの設定を書く
 "  :help neobundle-examples
-"""""""""""""""""""""""""""""""""""""""""""""""""
-
 NeoBundle 'vim-jp/vimdoc-ja'
 NeoBundle 'junegunn/seoul256.vim'
 NeoBundle 'itchyny/lightline.vim'
@@ -65,6 +62,18 @@ let g:lightline = {
 let g:seoul256_background = 236
 colo seoul256
 
+"""""""""""""""""""""""""""""""""""""""""""""""""
+" agをインストールするための設定(ubuntu 12.04)
+" wget "https://github.com/ggreer/the_silver_searcher/archive/master.zip"
+" sudo apt-get install automake
+" sudo apt-get install libpcre-ocaml-dev
+" sudo apt-get install liblzma-dev
+" ./build.sh
+" make install
+"""""""""""""""""""""""""""""""""""""""""""""""""
+
+" TAGSファイルの読み込みパス設定
+set tags=./TAGS,TAGS
 
 " must be set with multibyte strings
 scriptencoding utf-8

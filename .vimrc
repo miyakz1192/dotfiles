@@ -30,6 +30,8 @@ NeoBundle 'vim-jp/vimdoc-ja'
 NeoBundle 'junegunn/seoul256.vim'
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'rking/ag.vim'
+NeoBundle 'Shougo/neocomplete.vim'
+
 
 call neobundle#end()
 
@@ -63,6 +65,7 @@ let g:seoul256_background = 236
 colo seoul256
 
 """""""""""""""""""""""""""""""""""""""""""""""""
+" メモ：
 " agをインストールするための設定(ubuntu 12.04)
 " wget "https://github.com/ggreer/the_silver_searcher/archive/master.zip"
 " sudo apt-get install automake
@@ -71,6 +74,18 @@ colo seoul256
 " ./build.sh
 " make install
 """""""""""""""""""""""""""""""""""""""""""""""""
+
+"""""""""""""""""""""""""""""""""""""""""""""""""
+" neocompleteの設定
+"""""""""""""""""""""""""""""""""""""""""""""""""
+"neocompleを有効化するための設定
+let g:neocomplete#enable_at_startup = 1
+"Rubyのための設定(オムニ補完)
+if !exists('g:neocomplete#force_omni_input_patterns')
+    let g:neocomplete#force_omni_input_patterns = {}
+endif
+let g:neocomplete#force_omni_input_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
+
 
 " TAGSファイルの読み込みパス設定
 set tags=./TAGS,TAGS

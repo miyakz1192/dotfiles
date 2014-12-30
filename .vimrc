@@ -31,6 +31,7 @@ NeoBundleFetch 'Shugo/neobundle.vim'
 
 NeoBundle 'vim-jp/vimdoc-ja'
 NeoBundle 'junegunn/seoul256.vim'
+NeoBundle 'itchyny/lightline.vim'
 
 call neobundle#end()
 
@@ -52,6 +53,11 @@ let g:is_windows = has('win32') || has('win64')
 let g:is_gui = has('gui_running')
 let g:is_terminal = !g:is_gui
 let g:is_unicode = (&termencoding ==# 'utf-8' || &encoding == 'utf-8') && !(exists('g:discard_unicode') && g:discard_unicode != 0)
+
+"lightlineの設定
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ }
 
 " カラースキーム
 " Unified color scheme (default: dark)

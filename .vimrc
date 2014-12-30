@@ -45,6 +45,12 @@ if !has('vim_starting')
   call neobundle#call_hook('on_source')
 endif
 
+"vimのバージョンを 7.4 (2013 Aug 10, compiled Dec 30 2014 20:15:56)
+"にしてから、syntax onのを宣言をここの位置で行わないと、シンタックス
+"ハイライトが効かなくなった。
+syntax on
+set title
+set background=dark
 """""""""""""""""""""""""""""""""""""""""""""""""
 " その他の設定
 """""""""""""""""""""""""""""""""""""""""""""""""
@@ -65,14 +71,37 @@ let g:seoul256_background = 236
 colo seoul256
 
 """""""""""""""""""""""""""""""""""""""""""""""""
-" メモ：
-" agをインストールするための設定(ubuntu 12.04)
+" メモ:agをインストールするための設定(ubuntu 12.04)
 " wget "https://github.com/ggreer/the_silver_searcher/archive/master.zip"
 " sudo apt-get install automake
 " sudo apt-get install libpcre-ocaml-dev
 " sudo apt-get install liblzma-dev
 " ./build.sh
 " make install
+"""""""""""""""""""""""""""""""""""""""""""""""""
+
+"""""""""""""""""""""""""""""""""""""""""""""""""
+" メモ:luaをインストールするための設定
+" sudo apt-get  install lua5.1
+" sudo apt-get  install lua5.1-dev
+" vimをビルド
+"
+" sudo apt-get install mercurial
+" $ cd /usr/local/src
+" $ hg clone https://vim.googlecode.com/hg/ vim
+" $ cd vim
+" $ vim vuild.sh
+"  cat vuild.sh
+" #!/bin/sh
+" ./configure \
+"  --prefix=/usr/local \
+"  --with-features=huge \
+"  --enable-multibyte \
+"  --enable-luainterp \
+"  --enable-fail-if-missing && make && make install
+" $ chmod +x vuild.sh
+" $ ./vuild.sh
+" $ alias vim="/usr/local/bin/vim"
 """""""""""""""""""""""""""""""""""""""""""""""""
 
 """""""""""""""""""""""""""""""""""""""""""""""""
@@ -234,5 +263,4 @@ set timeoutlen=1000
 "  let &showbreak = "`-"
 "endif
 "" }}}
-
 

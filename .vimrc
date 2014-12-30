@@ -32,6 +32,7 @@ NeoBundleFetch 'Shugo/neobundle.vim'
 NeoBundle 'vim-jp/vimdoc-ja'
 NeoBundle 'junegunn/seoul256.vim'
 NeoBundle 'itchyny/lightline.vim'
+NeoBundle 'rking/ag.vim'
 
 call neobundle#end()
 
@@ -130,7 +131,7 @@ set undofile undodir=~/.vimundo
 
 " ### View ### {{{
 " 色数
-set t_Co=256
+"set t_Co=256
 
 " コマンドラインの行数
 set cmdheight=1
@@ -172,9 +173,6 @@ set display=lastline
 
 " vim の継続行(\)のインデント量を 0 にする
 "let g:vim_indent_cont = 0
-
-" シンプル・イズ・ベストなステータスライン
-set statusline=%f%M%R%H%W%q%{&ff=='unix'?'':',['.&ff.']'}%{&fenc=='utf-8'\|\|&fenc==''?'':',['.&fenc.']'}%{len(getqflist())==0?'':'\ [!]'}%=%(\|%3p%%%)
 
 " 補完メニューで preview しない
 "set completeopt-=preview

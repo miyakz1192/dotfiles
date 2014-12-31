@@ -104,6 +104,12 @@ colo seoul256
 " $ alias vim="/usr/local/bin/vim"
 """""""""""""""""""""""""""""""""""""""""""""""""
 
+
+"""""""""""""""""""""""""""""""""""""""""""""""""
+" メモ:rby連携の設定
+" sudo apt-get install ruby-dev
+"""""""""""""""""""""""""""""""""""""""""""""""""
+
 """""""""""""""""""""""""""""""""""""""""""""""""
 " neocompleteの設定
 """""""""""""""""""""""""""""""""""""""""""""""""
@@ -117,7 +123,7 @@ let g:neocomplete#force_omni_input_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
 
 
 " TAGSファイルの読み込みパス設定
-set tags=./TAGS,TAGS
+set tags=./TAGS,TAGS,./tags,tags
 
 " must be set with multibyte strings
 scriptencoding utf-8

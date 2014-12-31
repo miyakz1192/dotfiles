@@ -37,6 +37,8 @@ NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'Shougo/unite.vim'
 " Unite.vimで最近使ったファイルを表示できるようにする
 NeoBundle 'Shougo/neomru.vim'
+"scala でシンタックスハイライトを実現
+NeoBundle 'derekwyatt/vim-scala'
 
 call neobundle#end()
 

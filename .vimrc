@@ -81,8 +81,10 @@ colo seoul256
 " メモ:agをインストールするための設定(ubuntu 12.04)
 " wget "https://github.com/ggreer/the_silver_searcher/archive/master.zip"
 " sudo apt-get install automake
-" sudo apt-get install libpcre-ocaml-dev
-" sudo apt-get install liblzma-dev
+" sudo apt-get install libpcre-ocaml-dev -y
+" sudo apt-get install liblzma-dev -y
+" sudo apt-get install pkg-config -y
+" sudo apt-get install make -y
 " ./build.sh
 " make install
 """""""""""""""""""""""""""""""""""""""""""""""""
@@ -109,6 +111,33 @@ colo seoul256
 " $ chmod +x vuild.sh
 " $ ./vuild.sh
 " $ alias vim="/usr/local/bin/vim"
+"
+" #install for vim
+" #reference URL
+" #http://t2y.hatenablog.jp/entry/2014/04/26/191252
+" mkdir ~/source/vim
+" cd ~/source/vim
+" sudo apt-get build-dep vim -y
+" apt-get source vim
+" sudo apt-get install devscripts -y
+"
+" debchange -i
+" -------
+"  vim (2:7.4.052-1ubuntu4) UNRELEASED; urgency=medium
+"
+"    * enable lua interface
+"
+"     -- miyakz <miyakz@ubuntu>  Fri, 02 Jan 2015 23:36:36 +0900
+"     -------
+"
+"     edit "debian/rules"
+"     CFLAGS_vim-basic:=$(CFLAGS)
+"     CFGFLAGS_vim-basic:=$(CFGFLAGS) $(OPTFLAGS) $(NOXFLAGS)
+"     $(ALLINTERPFLAGS)
+"
+"     change NOINTERPFLAGS to ALLINTERPFLAGS
+"
+"     debuild -us -uc
 """""""""""""""""""""""""""""""""""""""""""""""""
 
 

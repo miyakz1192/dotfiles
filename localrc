@@ -1,0 +1,34 @@
+DEST=/opt/stack
+#Logging
+LOGFILE=stack.sh.log
+VERBOSE=True
+LOG_COLOR=True
+SCREEN_LOGDIR=$DEST/logs/screen
+# Neutron - Networking Service
+DISABLED_SERVICES=n-net
+ENABLED_SERVICES+=,q-svc,q-agt,q-dhcp,q-l3,q-meta,neutron
+# Neutron - Load Balancing,FWaaS, VPNaaS
+ENABLED_SERVICES+=,q-lbaas,q-fwaas, q-vpn
+# Heat - Orchestration Service
+ENABLED_SERVICES+=,heat,h-api,h-api-cfn,h-api-cw,h-eng
+HEAT_STANDALONE=True
+# Ceilometer - Metering Service (metering + alarming)
+ENABLED_SERVICES+=,ceilometer-acompute,ceilometer-acentral,ceilometer-collector,ceilometer-api
+ENABLED_SERVICES+=,ceilometer-alarm-notify,ceilometer-alarm-eval
+EXTRA_OPTS=(
+vnc_keymap=ja
+)
+DATABASE_PASSWORD=a
+RABBIT_PASSWORD=a
+SERVICE_TOKEN=a
+SERVICE_PASSWORD=a
+ADMIN_PASSWORD=a
+
+GLANCE_BRANCH=stable/icehouse
+HORIZON_BRANCH=stable/icehouse
+KEYSTONE_BRANCH=stable/icehouse
+NOVA_BRANCH=stable/icehouse
+NEUTRON_BRANCH=stable/icehouse
+HEAT_BRANCH=stable/icehouse
+CEILOMETER_BRANCH=stable/icehouse
+

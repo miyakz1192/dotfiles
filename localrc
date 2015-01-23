@@ -8,7 +8,7 @@ SCREEN_LOGDIR=$DEST/logs/screen
 DISABLED_SERVICES=n-net
 ENABLED_SERVICES+=,q-svc,q-agt,q-dhcp,q-l3,q-meta,neutron
 # Neutron - Load Balancing,FWaaS, VPNaaS
-ENABLED_SERVICES+=,q-lbaas,q-fwaas, q-vpn
+ENABLED_SERVICES+=,q-lbaas,q-fwaas,q-vpn
 # Heat - Orchestration Service
 ENABLED_SERVICES+=,heat,h-api,h-api-cfn,h-api-cw,h-eng
 HEAT_STANDALONE=True

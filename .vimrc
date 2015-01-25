@@ -307,11 +307,23 @@ set showcmd
 " 自動折り返ししない
 set textwidth=0
 
+" 長いテキストの折り返し
+set wrap
+
+" その代わり80文字目にラインを入れる
+set colorcolumn=80
+
 " タブページのラベルを常に表示
 set showtabline=2
 
 " 長い行を @ にさせない
 set display=lastline
+
+" 対応する括弧などをハイライト表示する
+set showmatch
+
+" 対応括弧のハイライト表示を3秒にする
+set matchtime=3
 
 " 埋める文字
 "set fillchars=stl:\ ,stlnc:\ ,vert:\|,fold:-,diff:-

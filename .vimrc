@@ -48,6 +48,8 @@ NeoBundleLazy "davidhalter/jedi-vim", {
       \   "mac": "pip install jedi",
       \   "unix": "sudo pip install jedi",
       \ }}
+"unite-tag
+NeoBundle 'tsukkee/unite-tag'
 
 call neobundle#end()
 

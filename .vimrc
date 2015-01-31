@@ -51,6 +51,18 @@ NeoBundleLazy "davidhalter/jedi-vim", {
 "unite-tag
 NeoBundle 'tsukkee/unite-tag'
 
+"vim shell
+"NeoBundle 'Shougo/vimshell.vim'
+"NeoBundle 'Shougo/vimproc.vim', {
+"      \ 'build' : {
+"      \     'windows' : 'tools\\update-dll-mingw',
+"      \     'cygwin' : 'make -f make_cygwin.mak',
+"      \     'mac' : 'make -f make_mac.mak',
+"      \     'linux' : 'make',
+"      \     'unix' : 'gmake',
+"      \    },
+"      \ }
+
 call neobundle#end()
 
 filetype plugin indent on
@@ -370,3 +382,14 @@ set timeoutlen=1000
 "endif
 "" }}}
 
+"""""""""""""""""""""""""""""""""""""""""""""""""
+" vimをソースからビルドする際のメモ
+" 最新のvim
+"  wget ftp://ftp.vim.org/pub/vim/unix/vim-7.4.tar.bz2
+"  clientserver,python,luaを有効にした設定
+"
+" sudo ./configure --enable-multibyte --with-features=huge --disable-selinux
+" --enable-luainterp=yes --with-lua-prefix=/usr +clientserver
+"  --enable-pythoninterp
+"  --with-python-config-dir=/usr/lib/python2.7/config-x86_64-linux-gnu/
+"""""""""""""""""""""""""""""""""""""""""""""""""

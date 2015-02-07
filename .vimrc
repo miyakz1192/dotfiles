@@ -51,6 +51,9 @@ NeoBundleLazy "davidhalter/jedi-vim", {
 "unite-tag
 NeoBundle 'tsukkee/unite-tag'
 
+"indent guid line(<leader>(\)を入力して、igを入力すると有効化)
+NeoBundle "nathanaelkane/vim-indent-guides"
+
 "vim shell
 "NeoBundle 'Shougo/vimshell.vim'
 "NeoBundle 'Shougo/vimproc.vim', {
@@ -219,6 +222,15 @@ function! s:hooks.on_source(bundle)
   let g:jedi#rename_command = '<Leader>r'
   " gundoと被るため大文字に変更 (2013-06-24 10:00 追記）
   let g:jedi#goto_assignments_command = '<Leader>g'
+endfunction
+
+"""""""""""""""""""""""""""""""""""""""""""""""""
+" indent guid lineの設定
+"""""""""""""""""""""""""""""""""""""""""""""""""
+let s:hooks = neobundle#get_hooks("vim-indent-guides")
+function! s:hooks.on_source(bundle)
+    let g:indent_guides_guide_size = 1
+      IndentGuidesEnable " 2013-06-24 10:00 追記
 endfunction
 
 "

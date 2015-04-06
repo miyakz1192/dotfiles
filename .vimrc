@@ -54,6 +54,26 @@ NeoBundle 'tsukkee/unite-tag'
 "indent guid line(<leader>(\)を入力して、igを入力すると有効化)
 NeoBundle "nathanaelkane/vim-indent-guides"
 
+"Drawit(矩形描画プラグイン)
+NeoBundle 'Drawit'
+
+" コード補完
+NeoBundle 'marcus/rsense'
+NeoBundle 'supermomonga/neocomplete-rsense.vim'
+
+" 静的解析
+NeoBundle 'scrooloose/syntastic'
+
+" ドキュメント参照
+NeoBundle 'thinca/vim-ref'
+NeoBundle 'yuku-t/vim-ref-ri'
+
+" メソッド定義元へのジャンプ
+NeoBundle 'szw/vim-tags'
+
+" 自動で閉じる
+NeoBundle 'tpope/vim-endwise'
+
 "vim shell
 "NeoBundle 'Shougo/vimshell.vim'
 "NeoBundle 'Shougo/vimproc.vim', {
@@ -233,6 +253,24 @@ function! s:hooks.on_source(bundle)
       IndentGuidesEnable " 2013-06-24 10:00 追記
 endfunction
 
+"""""""""""""""""""""""""""""""""""""""""""""""""
+" Rsenseの設定
+"""""""""""""""""""""""""""""""""""""""""""""""""
+let g:rsenseHome = '/usr/local/lib/rsense-0.3'
+let g:rsenseUseOmniFunc = 1
+
+"""""""""""""""""""""""""""""""""""""""""""""""""
+" Rrubocopの設定
+"""""""""""""""""""""""""""""""""""""""""""""""""
+" syntastic_mode_mapをactiveにするとバッファ保存時にsyntasticが走る
+" active_filetypesに、保存時にsyntasticを走らせるファイルタイプを指定する
+"let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes':['ruby'] }
+
+"let g:syntastic_ruby_checkers = ['rubocop']
+
+"""""""""""""""""""""""""""""""""""""""""""""""""
+" その他の設定
+"""""""""""""""""""""""""""""""""""""""""""""""""
 "
 " TAGSファイルの読み込みパス設定
 set tags=./TAGS,TAGS,./tags,tags

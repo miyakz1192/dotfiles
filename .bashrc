@@ -113,4 +113,5 @@ alias l='ls -CF'
 alias swap_ctl_and_caps='setxkbmap -option ctrl:swapcaps'
 alias restore_caps='setxkbmap -option'
 
+. ~/.my_alias 
 

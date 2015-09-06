@@ -214,7 +214,7 @@ noremap <C-P> :Unite buffer<CR>
 " ファイル一覧
 noremap <C-N> :Unite -buffer-name=file file<CR>
 " 最近使ったファイルの一覧
-noremap <C-Z> :Unite file_mru<CR>
+"noremap <C-Z> :Unite file_mru<CR>
 " sourcesを「今開いているファイルのディレクトリ」とする
 noremap :uff :<C-u>UniteWithBufferDir file -buffer-name=file<CR>
 " ウィンドウを分割して開く
@@ -332,7 +332,7 @@ set smartcase
 "set nowritebackup
 
 " 既存のファイルを開くときはとりあえず utf-8
-set fileencodings=utf-8,default,ucs-bom,latin1
+set fileencodings=utf-8,sjis,default,ucs-bom,latin1
 
 " Vim を終了しても undo の記録を残す
 set undofile undodir=~/.vimundo

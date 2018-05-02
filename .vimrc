@@ -87,6 +87,10 @@ NeoBundle 'tpope/vim-endwise'
 "      \     'unix' : 'gmake',
 "      \    },
 "      \ }
+"
+NeoBundle 'fatih/vim-go'
+let g:go_version_warning = 0
+
 
 call neobundle#end()
 
@@ -334,7 +338,7 @@ set smartcase
 "set nowritebackup
 
 " 既存のファイルを開くときはとりあえず utf-8
-set fileencodings=utf-8,default,ucs-bom,latin1
+set fileencodings=utf-8,sjis,default,ucs-bom,latin1
 
 " Vim を終了しても undo の記録を残す
 set undofile undodir=~/.vimundo

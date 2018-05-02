@@ -13,3 +13,10 @@ sudo gem install rubocop refe2
 echo "build reference"
 bitclust setup
 
+echo "check pip"
+python -m pip -V 2>&1 1> /dev/null | grep "No module named pip" > /dev/null
+if [ $? -eq 0 ]; then
+  echo "installing pip"
+  curl -kL https://bootstrap.pypa.io/get-pip.py | python
+fi
+

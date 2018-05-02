@@ -22,5 +22,9 @@ cd ctags
 make 
 make install
 
+git clone https://github.com/miyakz1192/typescript-ctags.git
+mkdir -p ~/.ctags.d/
+cp typescript-ctags/.ctags ~/.ctags.d/typescript.ctag
+
 
 

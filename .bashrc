@@ -113,5 +113,5 @@ alias l='ls -CF'
 alias swap_ctl_and_caps='setxkbmap -option ctrl:swapcaps'
 alias restore_caps='setxkbmap -option'
 alias swap_zenkaku_hankaku_escape="xmodmap ~/.Xmodmap"
-
+alias swap='swap_ctl_and_caps; swap_zenkaku_hankaku_escape'
 

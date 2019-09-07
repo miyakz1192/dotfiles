@@ -60,8 +60,8 @@ NeoBundle "nathanaelkane/vim-indent-guides"
 NeoBundle 'Drawit'
 
 " コード補完
-NeoBundle 'marcus/rsense'
-NeoBundle 'supermomonga/neocomplete-rsense.vim'
+"NeoBundle 'marcus/rsense'
+"NeoBundle 'supermomonga/neocomplete-rsense.vim'
 
 " 静的解析
 NeoBundle 'scrooloose/syntastic'
@@ -88,8 +88,8 @@ NeoBundle 'tpope/vim-endwise'
 "      \    },
 "      \ }
 "
-NeoBundle 'fatih/vim-go'
-let g:go_version_warning = 0
+"NeoBundle 'fatih/vim-go'
+"let g:go_version_warning = 0
 
 
 call neobundle#end()

@@ -29,7 +29,7 @@ NeoBundleFetch 'Shugo/neobundle.vim'
 """""""""""""""""""""""""""""""""""""""""""""""
 "  :help neobundle-examples
 NeoBundle 'vim-jp/vimdoc-ja'
-NeoBundle 'junegunn/seoul256.vim'
+"NeoBundle 'junegunn/seoul256.vim'
 NeoBundle 'itchyny/lightline.vim'
 NeoBundle 'rking/ag.vim'
 NeoBundle 'Shougo/neocomplete.vim'
